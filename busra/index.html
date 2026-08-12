@@ -109,7 +109,7 @@
       color: var(--green);
       font-size: 11px;
       font-weight: 800;
-      letter-spacing: .15em;
+      letter-spacing: .1em;
       text-transform: uppercase;
     }
 
@@ -324,7 +324,7 @@
             <span class="status-dot" aria-hidden="true"></span>
           </div>
           <div>
-            <p class="eyebrow">Co-Founder</p>
+            <p class="eyebrow">Co-Founder @ Rupsje <span aria-hidden="true">|</span> Kinderopvang Software</p>
             <h1>Busra Ekinci Alka</h1>
           </div>
         </div>
@@ -347,7 +347,7 @@
         </div>
 
         <nav class="socials" aria-label="Social media">
-          <a href="https://www.instagram.com/rupsjecom/">Volg Rupsje op Instagram</a><span>·</span>
+          <span>Volg Rupsje op</span><span>·</span><a href="https://www.instagram.com/rupsjecom/">Instagram</a><span>·</span>
           <a href="https://www.linkedin.com/company/136126077/">LinkedIn</a><span>·</span>
           <a href="https://www.facebook.com/profile.php?id=61576186899715">Facebook</a>
         </nav>
@@ -356,11 +356,11 @@
       <aside class="save-panel">
         <div class="save-inner">
           <div class="qr-frame">
-            <img src="https://cdn.jsdelivr.net/gh/ozn1907/rupsje-email-signature-assets@9a1b490/busra/assets/busra-contact-qr.png" alt="QR-code om Busra Ekinci Alka als contact op te slaan">
+            <img src="https://raw.githubusercontent.com/ozn1907/rupsje-email-signature-assets/main/busra/assets/busra-contact-qr.png" alt="QR-code om de digitale visitekaart van Busra Ekinci Alka te openen">
           </div>
-          <h2 class="scan-title">Scan &amp; bewaar</h2>
-          <p class="scan-copy">Scan de QR-code met de camera van je telefoon en voeg Busra direct toe aan je contacten.</p>
-          <a class="save-button" id="save-contact" href="busra-ekinci-alka.vcf" download="Busra-Ekinci-Alka.vcf">＋ Contact opslaan</a>
+          <h2 class="scan-title">Scan &amp; bekijk</h2>
+          <p class="scan-copy">Scan de QR-code om deze digitale visitekaart te openen. Sla het contact daarna met foto op.</p>
+          <a class="save-button" id="save-contact" href="https://raw.githubusercontent.com/ozn1907/rupsje-email-signature-assets/main/busra/busra-ekinci-alka.vcf" download="Busra-Ekinci-Alka.vcf">＋ Contact opslaan</a>
           <p class="privacy">Geen app of account nodig · standaard vCard</p>
         </div>
       </aside>
@@ -369,10 +369,25 @@
     <p class="footer">Rupsje · Software voor kinderopvang · <a href="https://www.rupsje.com">rupsje.com</a></p>
   </main>
   <script>
-    const vCard = `BEGIN:VCARD\r\nVERSION:3.0\r\nPRODID:-//Rupsje//Digitale Visitekaart//NL\r\nN:Ekinci Alka;Busra;;;\r\nFN:Busra Ekinci Alka\r\nORG:Rupsje\r\nTITLE:Co-Founder\r\nEMAIL;TYPE=INTERNET;TYPE=WORK;TYPE=PREF:busra@rupsje.com\r\nTEL;TYPE=CELL;TYPE=VOICE;TYPE=PREF:+31622784484\r\nURL;TYPE=WORK;TYPE=PREF:https://www.rupsje.com\r\nitem1.URL:https://www.linkedin.com/in/busra-ekinci-alka/\r\nitem1.X-ABLabel:LinkedIn\r\nitem2.URL:https://www.instagram.com/rupsjecom/\r\nitem2.X-ABLabel:Instagram\r\nitem3.URL:https://www.facebook.com/profile.php?id=61576186899715\r\nitem3.X-ABLabel:Facebook\r\nNOTE:Iedere opvang verdient premium service.\r\nEND:VCARD\r\n`;
     const saveContact = document.getElementById('save-contact');
-    const contactFile = new Blob([vCard], { type: 'text/vcard;charset=utf-8' });
-    saveContact.href = URL.createObjectURL(contactFile);
+    saveContact.addEventListener('click', async (event) => {
+      event.preventDefault();
+      try {
+        const response = await fetch(saveContact.href);
+        if (!response.ok) throw new Error('vCard kon niet worden geladen');
+        const contactFile = new Blob([await response.arrayBuffer()], { type: 'text/vcard;charset=utf-8' });
+        const downloadUrl = URL.createObjectURL(contactFile);
+        const download = document.createElement('a');
+        download.href = downloadUrl;
+        download.download = 'Busra-Ekinci-Alka.vcf';
+        document.body.appendChild(download);
+        download.click();
+        download.remove();
+        setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
+      } catch (_) {
+        window.location.href = saveContact.href;
+      }
+    });
   </script>
 </body>
 </html>
