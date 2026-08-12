@@ -115,13 +115,17 @@
 
     .brand-role {
       margin: 0 0 10px;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
+      display: block;
     }
 
-    .brand-role .eyebrow { margin: 0; }
+    .brand-role .eyebrow { margin: 0 0 7px; }
+
+    .brand-line {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      white-space: nowrap;
+    }
 
     .wordmark {
       display: block;
@@ -313,15 +317,28 @@
       .brandbar { padding: 0 5px; }
       .brandbar span { display: none; }
       .card { grid-template-columns: 1fr; border-radius: 24px; }
-      .identity { padding: 30px 25px 26px; }
-      .profile-row { align-items: flex-start; gap: 17px; }
-      .portrait { width: 104px; height: 104px; border-width: 4px; }
+      .identity { padding: 27px 25px 20px; }
+      .profile-row { align-items: center; gap: 15px; }
+      .portrait { width: 96px; height: 96px; border-width: 4px; }
       .status-dot { right: 3px; bottom: 3px; width: 18px; height: 18px; }
-      h1 { font-size: clamp(28px, 8vw, 38px); }
+      .brand-role { margin-bottom: 8px; }
+      .brand-role .eyebrow { margin-bottom: 5px; }
+      .wordmark { width: 58px; }
+      .brand-line { gap: 5px; }
+      .brand-descriptor { font-size: 8.5px; letter-spacing: .035em; }
+      h1 { font-size: clamp(28px, 7.5vw, 36px); }
       .handle { margin-top: 7px; font-size: 15px; }
-      .intro { margin: 21px 0 19px; padding-top: 17px; font-size: 13px; }
-      .contacts { grid-template-columns: 1fr; }
-      .save-panel { border-top: 1px solid var(--line); border-left: 0; padding: 30px 25px 32px; }
+      .intro { margin: 18px 0 15px; padding-top: 15px; font-size: 12.5px; }
+      .contacts { grid-template-columns: 1fr; gap: 7px; }
+      .contact { gap: 9px; padding: 8px 11px; border-radius: 12px; }
+      .icon { width: 28px; height: 28px; }
+      .icon svg { width: 14px; height: 14px; }
+      .contact-text { font-size: 12.5px; }
+      .socials { gap: 6px; margin-top: 11px; }
+      .socials a { padding-block: 4px; font-size: 11px; }
+      .socials span { padding-block: 4px; }
+      .socials span:first-child { font-size: 9px; }
+      .save-panel { border-top: 1px solid var(--line); border-left: 0; padding: 27px 25px 29px; }
       .qr-frame { width: 218px; border-width: 8px; border-radius: 24px; padding: 10px; }
     }
 
@@ -351,8 +368,10 @@
           <div>
             <div class="brand-role">
               <p class="eyebrow">Co-Founder</p>
-              <img class="wordmark" src="https://cdn.jsdelivr.net/gh/ozn1907/rupsje-email-signature-assets@5604157/busra/assets/rupsje-wordmark.png" alt="Rupsje">
-              <span class="brand-descriptor">| Kinderopvang Software</span>
+              <div class="brand-line">
+                <img class="wordmark" src="https://cdn.jsdelivr.net/gh/ozn1907/rupsje-email-signature-assets@5604157/busra/assets/rupsje-wordmark.png" alt="Rupsje">
+                <span class="brand-descriptor">| Kinderopvang Software</span>
+              </div>
             </div>
             <h1>Busra Ekinci Alka</h1>
           </div>
