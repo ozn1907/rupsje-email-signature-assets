@@ -130,13 +130,12 @@
 
     .intro {
       max-width: 560px;
-      margin: 30px 0 28px;
-      padding-top: 24px;
+      margin: 25px 0 23px;
+      padding-top: 20px;
       border-top: 1px solid var(--line);
       color: var(--muted);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 19px;
-      line-height: 1.45;
+      font-size: 14px;
+      line-height: 1.55;
     }
 
     .intro strong { color: var(--green); }
@@ -176,9 +175,11 @@
       border-radius: 50%;
       color: #fff;
       background: var(--leaf);
-      font-size: 12px;
-      font-weight: 900;
+      font-size: 0;
     }
+
+    .icon svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
+    .icon svg.fill { fill: currentColor; stroke: none; }
 
     .contact-text {
       overflow: hidden;
@@ -293,7 +294,7 @@
       .status-dot { right: 3px; bottom: 3px; width: 18px; height: 18px; }
       h1 { font-size: clamp(28px, 8vw, 38px); }
       .handle { margin-top: 7px; font-size: 15px; }
-      .intro { margin: 23px 0 20px; padding-top: 19px; font-size: 17px; }
+      .intro { margin: 21px 0 19px; padding-top: 17px; font-size: 13px; }
       .contacts { grid-template-columns: 1fr; }
       .save-panel { border-top: 1px solid var(--line); border-left: 0; padding: 30px 25px 32px; }
       .qr-frame { width: 218px; border-width: 8px; border-radius: 24px; padding: 10px; }
@@ -323,32 +324,31 @@
             <span class="status-dot" aria-hidden="true"></span>
           </div>
           <div>
-            <p class="eyebrow">Co-Founder · Rupsje</p>
+            <p class="eyebrow">Co-Founder</p>
             <h1>Busra Ekinci Alka</h1>
-            <p class="handle">@rupsje</p>
           </div>
         </div>
 
-        <p class="intro">Iedere opvang verdient: <strong>premium</strong> service<b>.</b><br>Kinderopvangsoftware voor elke maat opvang.</p>
+        <p class="intro">Iedere opvang verdient: <strong>premium</strong> service<b>.</b></p>
 
         <div class="contacts">
-          <a class="contact" href="mailto:busra.ekinci.alka@gmail.com">
-            <span class="icon">E</span><span class="contact-text">busra.ekinci.alka@gmail.com</span>
+          <a class="contact" href="mailto:busra@rupsje.com">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span><span class="contact-text">busra@rupsje.com</span>
           </a>
           <a class="contact" href="tel:+31622784484">
-            <span class="icon">T</span><span class="contact-text">+31 6 22784484</span>
+            <span class="icon" aria-hidden="true"><svg class="fill" viewBox="0 0 24 24"><path d="M6.6 2.8c.5-.2 1-.1 1.3.4l2.2 4.1c.3.5.2 1.1-.2 1.5l-1.6 1.5c1.1 2.4 3 4.3 5.4 5.4l1.5-1.6c.4-.4 1-.5 1.5-.2l4.1 2.2c.5.3.7.8.4 1.3l-1 3c-.2.5-.6.8-1.1.8C9.7 21.2 2.8 14.3 2.8 5c0-.5.3-.9.8-1.1z"/></svg></span><span class="contact-text">+31 6 22784484</span>
           </a>
           <a class="contact" href="https://www.rupsje.com">
-            <span class="icon">W</span><span class="contact-text">www.rupsje.com</span>
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.5 12h17M12 3c2.5 2.5 3.7 5.5 3.7 9S14.5 18.5 12 21c-2.5-2.5-3.7-5.5-3.7-9S9.5 5.5 12 3z"/></svg></span><span class="contact-text">www.rupsje.com</span>
           </a>
           <a class="contact" href="https://www.linkedin.com/in/busra-ekinci-alka/">
-            <span class="icon">in</span><span class="contact-text">busra-ekinci-alka</span>
+            <span class="icon" aria-hidden="true"><svg class="fill" viewBox="0 0 24 24"><path d="M5.4 3.8A2.4 2.4 0 1 1 5.4 8.6a2.4 2.4 0 0 1 0-4.8ZM3.3 10h4.2v10.7H3.3V10Zm6.8 0h4v1.5h.1c.6-1 1.9-2 4-2 4.3 0 5.1 2.8 5.1 6.5v4.7h-4.2v-4.2c0-1 0-3.3-2-3.3s-2.8 1.6-2.8 3.2v4.3h-4.2V10Z"/></svg></span><span class="contact-text">busra-ekinci-alka</span>
           </a>
         </div>
 
         <nav class="socials" aria-label="Social media">
-          <a href="https://www.instagram.com/rupsjecom/">Instagram</a><span>·</span>
-          <a href="https://www.linkedin.com/company/136126077/">Rupsje op LinkedIn</a><span>·</span>
+          <a href="https://www.instagram.com/rupsjecom/">Volg Rupsje op Instagram</a><span>·</span>
+          <a href="https://www.linkedin.com/company/136126077/">LinkedIn</a><span>·</span>
           <a href="https://www.facebook.com/profile.php?id=61576186899715">Facebook</a>
         </nav>
       </section>
@@ -360,7 +360,7 @@
           </div>
           <h2 class="scan-title">Scan &amp; bewaar</h2>
           <p class="scan-copy">Scan de QR-code met de camera van je telefoon en voeg Busra direct toe aan je contacten.</p>
-          <a class="save-button" href="https://cdn.jsdelivr.net/gh/ozn1907/rupsje-email-signature-assets@main/busra/busra-ekinci-alka.vcf" download="Busra-Ekinci-Alka.vcf">＋ Contact opslaan</a>
+          <a class="save-button" id="save-contact" href="busra-ekinci-alka.vcf" download="Busra-Ekinci-Alka.vcf">＋ Contact opslaan</a>
           <p class="privacy">Geen app of account nodig · standaard vCard</p>
         </div>
       </aside>
@@ -368,5 +368,11 @@
 
     <p class="footer">Rupsje · Software voor kinderopvang · <a href="https://www.rupsje.com">rupsje.com</a></p>
   </main>
+  <script>
+    const vCard = `BEGIN:VCARD\r\nVERSION:3.0\r\nPRODID:-//Rupsje//Digitale Visitekaart//NL\r\nN:Ekinci Alka;Busra;;;\r\nFN:Busra Ekinci Alka\r\nORG:Rupsje\r\nTITLE:Co-Founder\r\nEMAIL;TYPE=INTERNET;TYPE=WORK;TYPE=PREF:busra@rupsje.com\r\nTEL;TYPE=CELL;TYPE=VOICE;TYPE=PREF:+31622784484\r\nURL;TYPE=WORK;TYPE=PREF:https://www.rupsje.com\r\nitem1.URL:https://www.linkedin.com/in/busra-ekinci-alka/\r\nitem1.X-ABLabel:LinkedIn\r\nitem2.URL:https://www.instagram.com/rupsjecom/\r\nitem2.X-ABLabel:Instagram\r\nitem3.URL:https://www.facebook.com/profile.php?id=61576186899715\r\nitem3.X-ABLabel:Facebook\r\nNOTE:Iedere opvang verdient premium service.\r\nEND:VCARD\r\n`;
+    const saveContact = document.getElementById('save-contact');
+    const contactFile = new Blob([vCard], { type: 'text/vcard;charset=utf-8' });
+    saveContact.href = URL.createObjectURL(contactFile);
+  </script>
 </body>
 </html>

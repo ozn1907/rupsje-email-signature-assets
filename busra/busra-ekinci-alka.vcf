@@ -1,14 +1,18 @@
 BEGIN:VCARD
 VERSION:3.0
+PRODID:-//Rupsje//Digitale Visitekaart//NL
 N:Ekinci Alka;Busra;;;
 FN:Busra Ekinci Alka
 ORG:Rupsje
 TITLE:Co-Founder
-EMAIL;TYPE=INTERNET,WORK:busra.ekinci.alka@gmail.com
-TEL;TYPE=CELL:+31622784484
-URL;TYPE=WORK:https://www.rupsje.com
-URL;TYPE=LinkedIn:https://www.linkedin.com/in/busra-ekinci-alka/
-URL;TYPE=Instagram:https://www.instagram.com/rupsjecom/
-URL;TYPE=Facebook:https://www.facebook.com/profile.php?id=61576186899715
-NOTE:Kinderopvangsoftware - Rupsje
+EMAIL;TYPE=INTERNET;TYPE=WORK;TYPE=PREF:busra@rupsje.com
+TEL;TYPE=CELL;TYPE=VOICE;TYPE=PREF:+31622784484
+URL;TYPE=WORK;TYPE=PREF:https://www.rupsje.com
+item1.URL:https://www.linkedin.com/in/busra-ekinci-alka/
+item1.X-ABLabel:LinkedIn
+item2.URL:https://www.instagram.com/rupsjecom/
+item2.X-ABLabel:Instagram
+item3.URL:https://www.facebook.com/profile.php?id=61576186899715
+item3.X-ABLabel:Facebook
+NOTE:Iedere opvang verdient premium service.
 END:VCARD
