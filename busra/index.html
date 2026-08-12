@@ -36,7 +36,7 @@
     a { color: inherit; }
 
     .page {
-      width: min(100% - 28px, 1080px);
+      width: min(100% - 28px, 760px);
       margin: 0 auto;
       padding: 34px 0 52px;
     }
@@ -60,8 +60,6 @@
 
     .card {
       overflow: hidden;
-      display: grid;
-      grid-template-columns: minmax(0, 1.18fr) minmax(300px, .82fr);
       border: 1px solid rgba(46, 58, 35, .1);
       border-radius: 30px;
       background: rgba(255, 255, 255, .92);
@@ -238,48 +236,7 @@
     .socials span { padding: 5px 1px; color: #c3c7bc; }
     .socials span:first-child { font-size: 10px; letter-spacing: .03em; }
 
-    .save-panel {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 34px;
-      background: linear-gradient(150deg, #f0f5e9, #fbf8f1 62%);
-      border-left: 1px solid var(--line);
-      text-align: center;
-    }
-
-    .save-inner { width: min(100%, 310px); }
-
-    .qr-frame {
-      width: min(100%, 260px);
-      margin: 0 auto;
-      border: 10px solid var(--green);
-      border-radius: 28px;
-      padding: 13px;
-      background: #fff;
-      box-shadow: 0 24px 48px -30px rgba(46, 58, 35, .55);
-    }
-
-    .qr-frame img {
-      display: block;
-      width: 100%;
-      height: auto;
-      image-rendering: pixelated;
-    }
-
-    .scan-title {
-      margin: 20px 0 5px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 25px;
-      line-height: 1.05;
-    }
-
-    .scan-copy {
-      margin: 0 auto 19px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.5;
-    }
+    .save-action { width: min(100%, 360px); margin-top: 20px; }
 
     .save-button {
       display: flex;
@@ -296,8 +253,6 @@
       font-weight: 800;
       text-decoration: none;
     }
-
-    .save-button + .qr-frame { margin-top: 22px; }
 
     .privacy {
       margin: 12px 0 0;
@@ -318,7 +273,7 @@
       .page { width: min(100% - 18px, 620px); padding-top: 18px; }
       .brandbar { padding: 0 5px; }
       .brandbar span { display: none; }
-      .card { grid-template-columns: 1fr; border-radius: 24px; }
+      .card { border-radius: 24px; }
       .identity { padding: 27px 25px 20px; }
       .profile-row { align-items: center; gap: 15px; }
       .portrait { width: 96px; height: 96px; border-width: 4px; }
@@ -340,8 +295,7 @@
       .socials a { padding-block: 4px; font-size: 11px; }
       .socials span { padding-block: 4px; }
       .socials span:first-child { font-size: 9px; }
-      .save-panel { border-top: 1px solid var(--line); border-left: 0; padding: 27px 25px 29px; }
-      .qr-frame { width: 218px; border-width: 8px; border-radius: 24px; padding: 10px; }
+      .save-action { width: 100%; margin-top: 15px; }
     }
 
     @media (max-width: 390px) {
@@ -401,19 +355,11 @@
           <a href="https://www.linkedin.com/company/136126077/">LinkedIn</a><span>·</span>
           <a href="https://www.facebook.com/profile.php?id=61576186899715">Facebook</a>
         </nav>
-      </section>
-
-      <aside class="save-panel">
-        <div class="save-inner">
+        <div class="save-action">
           <a class="save-button" id="save-contact" href="https://raw.githubusercontent.com/ozn1907/rupsje-email-signature-assets/main/busra/busra-ekinci-alka.vcf" download="Busra-Ekinci-Alka.vcf">＋ Contact opslaan</a>
-          <div class="qr-frame">
-            <img src="https://raw.githubusercontent.com/ozn1907/rupsje-email-signature-assets/main/busra/assets/busra-contact-qr.png" alt="QR-code om de digitale visitekaart van Busra Ekinci Alka te openen">
-          </div>
-          <h2 class="scan-title">Scan &amp; bekijk</h2>
-          <p class="scan-copy">Scan de QR-code om deze digitale visitekaart te openen. Sla het contact daarna met foto op.</p>
-          <p class="privacy">Geen app of account nodig · standaard vCard</p>
+          <p class="privacy">Met profielfoto · geen app of account nodig</p>
         </div>
-      </aside>
+      </section>
     </article>
 
     <p class="footer">Rupsje · Software voor kinderopvang · <a href="https://www.rupsje.com">rupsje.com</a></p>
