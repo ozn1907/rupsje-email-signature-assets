@@ -222,20 +222,29 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 18px;
+      justify-content: space-between;
+      gap: 16px;
       margin-top: 16px;
+      padding: 7px 0 6px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
 
-    .link-group {
+    .social-links,
+    .store-links {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 18px;
     }
 
+    .store-links {
+      margin-left: auto;
+      justify-content: flex-end;
+    }
+
     .socials a {
-      border-bottom: 1px solid rgba(76, 140, 59, .25);
-      padding: 5px 4px;
+      padding: 0 5px;
       color: var(--green);
       font-size: 12px;
       font-weight: 800;
@@ -297,8 +306,8 @@
       .icon { width: 28px; height: 28px; }
       .icon svg { width: 14px; height: 14px; }
       .contact-text { font-size: 12.5px; }
-      .socials { gap: 12px; margin-top: 11px; }
-      .link-group { gap: 12px; }
+      .socials { gap: 12px; margin-top: 11px; padding: 6px 0 5px; }
+      .social-links, .store-links { gap: 12px; }
       .socials a { padding-block: 4px; font-size: 11px; }
       .save-action { width: 100%; margin-top: 15px; }
     }
@@ -356,10 +365,12 @@
         </div>
 
         <nav class="socials" aria-label="Social media and app stores">
-          <div class="link-group">
+          <div class="social-links">
             <a href="https://www.linkedin.com/company/136126077/">LinkedIn</a>
             <a href="https://www.instagram.com/rupsjecom/">Instagram</a>
             <a href="https://www.facebook.com/profile.php?id=61576186899715">Facebook</a>
+          </div>
+          <div class="store-links" aria-label="App stores">
             <a href="https://apps.apple.com/nl/app/rupsje/id6796049517">App Store</a>
             <a href="https://play.google.com/store/apps/details?id=com.rupsje.app">Google Play</a>
           </div>
