@@ -221,21 +221,35 @@
     .socials {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      align-items: center;
+      gap: 18px;
       margin-top: 16px;
+    }
+
+    .social-links,
+    .store-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .store-links {
+      margin-left: auto;
+      justify-content: flex-end;
     }
 
     .socials a {
       border-bottom: 1px solid rgba(76, 140, 59, .25);
-      padding: 5px 1px;
+      padding: 5px 4px;
       color: var(--green);
       font-size: 12px;
       font-weight: 800;
       text-decoration: none;
     }
 
-    .socials span { padding: 5px 1px; color: #c3c7bc; }
-    .socials span:first-child { font-size: 10px; letter-spacing: .03em; }
+    .social-links span { padding: 5px 0; color: #c3c7bc; }
+    .social-links span:first-child { font-size: 10px; letter-spacing: .03em; }
 
     .save-action { width: min(100%, 360px); margin-top: 20px; }
 
@@ -292,10 +306,11 @@
       .icon { width: 28px; height: 28px; }
       .icon svg { width: 14px; height: 14px; }
       .contact-text { font-size: 12.5px; }
-      .socials { gap: 6px; margin-top: 11px; }
+      .socials { gap: 14px; margin-top: 11px; }
+      .social-links, .store-links { gap: 12px; }
       .socials a { padding-block: 4px; font-size: 11px; }
-      .socials span { padding-block: 4px; }
-      .socials span:first-child { font-size: 9px; }
+      .social-links span { padding-block: 4px; }
+      .social-links span:first-child { font-size: 9px; }
       .save-action { width: 100%; margin-top: 15px; }
     }
 
@@ -351,10 +366,17 @@
           </a>
         </div>
 
-        <nav class="socials" aria-label="Social media">
-          <span>Volg ons op</span><span>·</span><a href="https://www.instagram.com/rupsjecom/">Instagram</a><span>·</span>
-          <a href="https://www.linkedin.com/company/136126077/">LinkedIn</a><span>·</span>
-          <a href="https://www.facebook.com/profile.php?id=61576186899715">Facebook</a>
+        <nav class="socials" aria-label="Social media and app stores">
+          <div class="social-links">
+            <span>Volg ons op</span>
+            <a href="https://www.instagram.com/rupsjecom/">Instagram</a>
+            <a href="https://www.linkedin.com/company/136126077/">LinkedIn</a>
+            <a href="https://www.facebook.com/profile.php?id=61576186899715">Facebook</a>
+          </div>
+          <div class="store-links" aria-label="App stores">
+            <a href="https://apps.apple.com/nl/app/rupsje/id6796049517">App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.rupsje.app">Google Play</a>
+          </div>
         </nav>
         <div class="save-action">
           <a class="save-button" id="save-contact" href="https://raw.githubusercontent.com/ozn1907/rupsje-email-signature-assets/main/busra/busra-ekinci-alka.vcf" download="Busra-Ekinci-Alka.vcf">＋ Contact opslaan</a>
